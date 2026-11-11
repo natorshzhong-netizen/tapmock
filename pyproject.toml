@@ -1,0 +1,29 @@
+[project]
+name = "tapmock"
+version = "0.1.0"
+description = "录一次 HTTP(S) 流量，脱敏后变成可离线回放的 Mock 服务"
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "MIT" }
+authors = [{ name = "Cheng Zhong" }]
+dependencies = [
+  "mitmproxy>=12,<13",
+  "requests>=2.31,<3",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10", "ruff>=0.6"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+pythonpath = ["."]
+markers = ["proxy: 需要 mitmdump（CI 会安装 mitmproxy）"]
+
+[tool.ruff]
+line-length = 110
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+ignore = ["E501"]

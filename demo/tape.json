@@ -1,0 +1,273 @@
+{
+  "version": 1,
+  "created_at": "2026-11-11T06:29:38+00:00",
+  "source": "demo:local-upstream",
+  "exchanges": [
+    {
+      "id": "ex-001",
+      "request": {
+        "method": "POST",
+        "url": "http://demo.local/api/login",
+        "headers": [
+          [
+            "Host",
+            "127.0.0.1:50134"
+          ],
+          [
+            "User-Agent",
+            "python-requests/2.34.2"
+          ],
+          [
+            "Accept-Encoding",
+            "gzip, deflate, br, zstd"
+          ],
+          [
+            "Accept",
+            "*/*"
+          ],
+          [
+            "Connection",
+            "keep-alive"
+          ],
+          [
+            "Content-Length",
+            "46"
+          ],
+          [
+            "Content-Type",
+            "application/json"
+          ]
+        ],
+        "body": "{\"username\": \"alice\", \"password\": \"<redacted>\"}",
+        "body_base64": null
+      },
+      "response": {
+        "status": 200,
+        "headers": [
+          [
+            "Server",
+            "BaseHTTP/0.6 Python/3.14.7"
+          ],
+          [
+            "Date",
+            "Wed, 11 Nov 2026 06:29:38 GMT"
+          ],
+          [
+            "Content-Type",
+            "application/json; charset=utf-8"
+          ],
+          [
+            "Content-Length",
+            "71"
+          ],
+          [
+            "Set-Cookie",
+            "<redacted>"
+          ]
+        ],
+        "body": "{\"token\": \"<redacted>\", \"user\": {\"name\": \"alice\", \"tier\": \"gold\"}}",
+        "body_base64": null
+      },
+      "duration_ms": 1,
+      "redactions": [
+        "request.body.password",
+        "response.headers.set-cookie",
+        "response.body.token"
+      ]
+    },
+    {
+      "id": "ex-002",
+      "request": {
+        "method": "GET",
+        "url": "http://demo.local/api/products",
+        "headers": [
+          [
+            "Host",
+            "127.0.0.1:50134"
+          ],
+          [
+            "User-Agent",
+            "python-requests/2.34.2"
+          ],
+          [
+            "Accept-Encoding",
+            "gzip, deflate, br, zstd"
+          ],
+          [
+            "Accept",
+            "*/*"
+          ],
+          [
+            "Connection",
+            "keep-alive"
+          ],
+          [
+            "Cookie",
+            "<redacted>"
+          ]
+        ],
+        "body": "",
+        "body_base64": null
+      },
+      "response": {
+        "status": 200,
+        "headers": [
+          [
+            "Server",
+            "BaseHTTP/0.6 Python/3.14.7"
+          ],
+          [
+            "Date",
+            "Wed, 11 Nov 2026 06:29:38 GMT"
+          ],
+          [
+            "Content-Type",
+            "application/json; charset=utf-8"
+          ],
+          [
+            "Content-Length",
+            "121"
+          ]
+        ],
+        "body": "{\"items\": [{\"id\": \"kb-01\", \"name\": \"机械键盘\", \"price\": 299}, {\"id\": \"ms-02\", \"name\": \"无线鼠标\", \"price\": 129}]}",
+        "body_base64": null
+      },
+      "duration_ms": 1,
+      "redactions": [
+        "request.headers.cookie"
+      ]
+    },
+    {
+      "id": "ex-003",
+      "request": {
+        "method": "GET",
+        "url": "http://demo.local/api/orders",
+        "headers": [
+          [
+            "Host",
+            "127.0.0.1:50134"
+          ],
+          [
+            "User-Agent",
+            "python-requests/2.34.2"
+          ],
+          [
+            "Accept-Encoding",
+            "gzip, deflate, br, zstd"
+          ],
+          [
+            "Accept",
+            "*/*"
+          ],
+          [
+            "Connection",
+            "keep-alive"
+          ],
+          [
+            "Authorization",
+            "<redacted>"
+          ],
+          [
+            "Cookie",
+            "<redacted>"
+          ]
+        ],
+        "body": "",
+        "body_base64": null
+      },
+      "response": {
+        "status": 200,
+        "headers": [
+          [
+            "Server",
+            "BaseHTTP/0.6 Python/3.14.7"
+          ],
+          [
+            "Date",
+            "Wed, 11 Nov 2026 06:29:38 GMT"
+          ],
+          [
+            "Content-Type",
+            "application/json; charset=utf-8"
+          ],
+          [
+            "Content-Length",
+            "65"
+          ]
+        ],
+        "body": "{\"orders\": [{\"id\": \"A1001\", \"status\": \"shipped\", \"amount\": 299}]}",
+        "body_base64": null
+      },
+      "duration_ms": 1,
+      "redactions": [
+        "request.headers.authorization",
+        "request.headers.cookie"
+      ]
+    },
+    {
+      "id": "ex-004",
+      "request": {
+        "method": "GET",
+        "url": "http://demo.local/api/profile",
+        "headers": [
+          [
+            "Host",
+            "127.0.0.1:50134"
+          ],
+          [
+            "User-Agent",
+            "python-requests/2.34.2"
+          ],
+          [
+            "Accept-Encoding",
+            "gzip, deflate, br, zstd"
+          ],
+          [
+            "Accept",
+            "*/*"
+          ],
+          [
+            "Connection",
+            "keep-alive"
+          ],
+          [
+            "Cookie",
+            "<redacted>"
+          ]
+        ],
+        "body": "",
+        "body_base64": null
+      },
+      "response": {
+        "status": 200,
+        "headers": [
+          [
+            "Server",
+            "BaseHTTP/0.6 Python/3.14.7"
+          ],
+          [
+            "Date",
+            "Wed, 11 Nov 2026 06:29:38 GMT"
+          ],
+          [
+            "Content-Type",
+            "application/json; charset=utf-8"
+          ],
+          [
+            "Content-Length",
+            "87"
+          ]
+        ],
+        "body": "{\"name\": \"alice\", \"email\": \"<redacted>\", \"phone\": \"<redacted>\", \"tier\": \"gold\"}",
+        "body_base64": null
+      },
+      "duration_ms": 1,
+      "redactions": [
+        "request.headers.cookie",
+        "response.body.email",
+        "response.body.phone"
+      ]
+    }
+  ],
+  "count": 4
+}

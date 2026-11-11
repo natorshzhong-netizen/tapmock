@@ -1,0 +1,2 @@
+mitmproxy>=12,<13
+requests>=2.31,<3
