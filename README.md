@@ -8,6 +8,8 @@
 
 ![流量视图](docs/tape.png)
 
+> 一步一步操作 + 代码地图 + 面试讲法：[docs/walkthrough.md](docs/walkthrough.md)
+
 ## 它解决什么问题
 
 - **联调阻塞**：后端没就绪时，前端对着录好的 Mock 开发，字段和状态码都是真的。
